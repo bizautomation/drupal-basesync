@@ -4,6 +4,7 @@
     "type": "library",
     "version": "1.0.0-dev",
     "license": "GPL-3.0",
+    "minimum-stability" : "dev",
     "authors": [
         {
             "name": "Vorapoap Lohwongwatana",
