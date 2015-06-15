@@ -1,0 +1,20 @@
+{
+    "name": "bizautomation/drupal-basesync",
+    "description": "Drupal8 - Database Synchronizer Base Class (not module)",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Vorapoap Lohwongwatana",
+            "email": "vorapoap@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Bizautomation\\Drupal\\": "src/",
+        }
+    }
+    "minimum-stability": "dev",
+    "require": {}
+}
