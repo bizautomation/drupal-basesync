@@ -2,6 +2,8 @@
     "name": "bizautomation/drupal-basesync",
     "description": "Drupal8 - Database Synchronizer Base Class (not module)",
     "type": "library",
+    "prefer-stable": true,
+    "minimum-stability" : true,
     "license": "GPL-3.0",
     "authors": [
         {
