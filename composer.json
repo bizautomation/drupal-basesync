@@ -17,7 +17,7 @@
 
     "autoload": {
         "psr-4": {
-            "Bizautomation\\Drupal\\": "src/"
+            "Bizat\\Drupal\\": "src/"
         }
     }
 }
