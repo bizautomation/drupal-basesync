@@ -12,9 +12,9 @@
 
     "autoload": {
         "psr-4": {
-            "Bizautomation\\Drupal\\": "src/",
+            "Bizautomation\\Drupal\\": "src/"
         }
-    }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
