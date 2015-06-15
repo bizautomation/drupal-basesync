@@ -3,6 +3,9 @@
     "description": "Drupal8 - Database Synchronizer Base Class (not module)",
     "type": "library",
     "prefer-stable": true,
+    "require": {
+        "php": ">=5.3.0"
+    },
     "minimum-stability" : true,
     "license": "GPL-3.0",
     "authors": [
