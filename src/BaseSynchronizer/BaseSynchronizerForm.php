@@ -9,7 +9,6 @@ abstract class BaseSynchronizerForm extends FormBase {
 
 
     public function __construct() {
-        parent::__construct();
     }
 
     /**
