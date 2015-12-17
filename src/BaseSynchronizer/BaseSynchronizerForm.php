@@ -73,5 +73,54 @@ abstract class BaseSynchronizerForm extends FormBase {
             drupal_set_message($message, 'error');
         }
     }
+    
+    /*
+    Derived Class must at least define these 3 functions
+    
+    public function buildForm(array $form, FormStateInterface $form_state) {
+        // Build form for synchronizer landing page
+    }
+    
+    public function submitForm(array &$form, FormStateInterface $form_state) {
+        // Example of sandbox sync_options
+        $sync_options = array(
+            'from' => $from,
+            'to' => $to,
+            'file' => __FILE__,
+            'step' => $step,
+            'service' => $service,
+            'operation' => $operation,
+            'options' => $opts
+        );
+        // Create batch operation
+        $batch = array(
+            'operations' => array(),
+            'finished' => array(get_class($this), 'finishBatch'),
+            'title' => t('Database Synchronizer') . ' : ' . $this->_syncOptions[$operation],
+            'init_message' => t('Starting'),
+            'progress_message' => t('Completed @current entries of @total.'),
+            'error_message' => t('Database synchronization has encountered an error.'),
+            'file' => __FILE__,
+        );
+        
+        // Retrieve batchOperation for inherited class of BaseSynchronizerService
+        $batchOperations = \Drupal::service($service)->getBatchOperations($sync_options);
+        
+        // Inject any batch operation into batch variable for Batch API
+        foreach ($batchOperations as $op) {
+            $batch['operations'][] = array(
+                // PARAMETERS MUST EXACTLY MATCH THE FUNCTION PARAMETER LIST OR IT WILL JUST SILENTLY IGNORE!!!
+                '***[derived class]***::processBatch',
+                array($op['method'], $op['sync_options'])
+            );
+        }
+
+        // Start batch and call batch page
+        batch_set($batch);
+    }
+    
+    
+    
+    */
 
 }
