@@ -36,7 +36,7 @@ abstract class BaseSynchronizerForm extends FormBase {
                 $context['sandbox']['sync_options'] = $sync_options;
             }
             $service = \Drupal::service($sync_options['service']);
-            call_user_func_array(array($service, $op_method), array($context));
+            call_user_func_array(array($service, $op_method), array(&$context));
 
         } catch (\Exception $e) {
             if (!isset($context['results']['errors'])) {
