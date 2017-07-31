@@ -137,7 +137,7 @@ abstract class BaseSynchronizerService
         return db_query($sqlCreate);
     }
 
-    protected function _getDataCount($src, $table)
+    protected function _getDataCount($src, $table, $options = array())
     {
         db_set_active($src);
         $result = db_query("SELECT COUNT(1) FROM " . $table);
