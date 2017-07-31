@@ -150,7 +150,7 @@ abstract class BaseSynchronizerService
         db_query("RENAME TABLE " . $from_table . " TO " . $to_table);
     }
 
-    protected function _transferData($sync_from, $table, $sync_to, $dest_table, $start_from, $step_per_run)
+    protected function _transferData($sync_from, $table, $sync_to, $dest_table, $start_from, $step_per_run, $options = array())
     {
         db_set_active($sync_from);
         $result = db_query("SELECT * FROM " . $table . " LIMIT " . $start_from . "," . $step_per_run);
